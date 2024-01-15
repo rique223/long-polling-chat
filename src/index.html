@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-1.6.4.min.j"></script>
+        <script>
+            let messageCounter = 0;
+            const apiUrl = `/poll/${messageCounter}`;
+
+            const poll = () => {
+                $.getJSON(apiUrl, (response) => {
+                    const outputTextarea = $("#output");
+
+                    messageCounter = response.messageCounter;
+
+                    outputTextarea.text(
+                        `${outputTextarea.text()}${response.append}`
+                    );
+
+                    poll();
+                });
+            };
+
+            poll();
+        </script>
+    </head>
+    <body>
+        <textarea id="output" style="width: 100%; height: 100%"></textarea>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+Arguments: 
+  /home/rique223/.nvm/versions/node/v14.21.3/bin/node /usr/local/bin/yarn init @eslint/config
+
+PATH: 
+  /home/rique223/.nvm/versions/node/v14.21.3/bin:/home/rique223/.asdf/shims:/home/rique223/.asdf/bin:/bin:/usr/bin:/usr/local/bin:/home/rique223/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.21.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:137150:13)
+      at Interface.emit (events.js:400:28)
+      at Interface._ttyWrite (readline.js:1001:16)
+      at ReadStream.onkeypress (readline.js:265:10)
+      at ReadStream.emit (events.js:400:28)
+      at emitKeys (internal/readline/utils.js:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1270:36)
+      at ReadStream.emit (events.js:400:28)
+      at addChunk (internal/streams/readable.js:293:12)
+
+npm manifest: 
+  {
+    "name": "long-polling-chat-node",
+    "version": "1.0.0",
+    "description": "Learn nodejs by creating a chat application that uses the long polling method.",
+    "main": "index.js",
+    "author": "rique223 <henrique.jobs1@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
