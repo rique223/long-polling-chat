@@ -34,11 +34,11 @@ http.createServer((request, response) => {
     }
 
     if (parsedUrl.pathname.includes('/msg')) {
-        const newMessage = unescape(parsedUrl.pathname.substr(5));
+        const newMessage = parsedUrl.pathname.replace('/msg/', '');
 
         messages.push(newMessage);
 
-        while (clients.lengt > 0) {
+        while (clients.length > 0) {
             const client = clients.pop();
 
             client.end(JSON.stringify({
@@ -48,6 +48,8 @@ http.createServer((request, response) => {
         }
         response.end();
     }
+
+    console.log('Number of messages:', messages.length);
 }).listen(8080, 'localhost');
 
 console.log('Server running at http://localhost:8080/');
